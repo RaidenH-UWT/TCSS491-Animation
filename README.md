@@ -24,4 +24,4 @@
     - may share final result in the `#animations` channel
 
 ## Notes
-- Spyro the Dragon sprites ripped by [Heartlessdragoon](https://www.spriters-resource.com/profile/heartlessdragoon/). Thank you!
+- Spyro the Dragon sprites ripped from The Legend of Spyro: A New Beginning by [Heartlessdragoon](https://www.spriters-resource.com/profile/heartlessdragoon/). Thank you!

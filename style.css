@@ -1,0 +1,9 @@
+body {
+    background-color: #585858;
+}
+
+#gameWorld {
+    background: white;
+    border: 1px solid black;
+    margin-left: 25%;
+}
