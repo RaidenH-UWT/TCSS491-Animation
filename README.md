@@ -22,3 +22,6 @@
 - [ ] Submit your animation
     - commit to github and submit the live link (not repo link)
     - may share final result in the `#animations` channel
+
+## Notes
+- Spyro the Dragon sprites ripped by [Heartlessdragoon](https://www.spriters-resource.com/profile/heartlessdragoon/). Thank you!
