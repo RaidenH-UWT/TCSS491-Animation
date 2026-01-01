@@ -18,7 +18,7 @@
 - [X] (Optional) Have fun with your spritesheet
     - make a buncha different animations and show off
 
-- [ ] Submit your animation
+- [X] Submit your animation
     - commit to github and submit the live link (not repo link)
     - may share final result in the `#animations` channel
 
