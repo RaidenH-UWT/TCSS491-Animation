@@ -9,6 +9,7 @@ ASSET_MANAGER.queueDownload("./icon.png");
 ASSET_MANAGER.queueDownload("./sprites/spyro_spritesheet.png");
 ASSET_MANAGER.queueDownload("./sprites/spyro_spritesheet_debug.png");
 ASSET_MANAGER.queueDownload("./sprites/background.png");
+ASSET_MANAGER.queueDownload("./sprites/background_debug.png");
 
 ASSET_MANAGER.downloadAll(startGame);
 
