@@ -16,9 +16,7 @@ class GameEngine {
         this.keys = {};
 
         // Options and the Details
-        this.options = options || {
-            debugging: false,
-        };
+        this.options = options;
     };
 
     init(ctx) {

@@ -1,7 +1,26 @@
+/**
+ * This class handles animating sprites from a spritesheet
+ * @param {spritesheet} Image spritesheet to work from
+ * @param {xStart} x-coord of the top-left corner of the sprite to use
+ * @param {yStart} y-coord of the top-left corner of the sprite to use
+ * @param {width} width of one frame of the sprite
+ * @param {height} height of one frame of the sprite
+ * @param {frameCount} number of frames in the animation
+ * @param {frameDuration} length of one frame in [UNITS??]
+ * @param {framePadding} gap between each frame
+ * @param {reverse} boolean whether to play the animation in reverse
+ * @param {loop} boolean whether to loop the animation or not
+ * @param {loopStart} required if loop=true, the frame to start the loop on
+ * @param {loopEnd} required if loop=true, the frame to end the loop on
+ */
 class Animator {
-    // x,y is top left corner; width/height are dims per frame
-    constructor(spritesheet, xStart, yStart, width, height, frameCount, frameDuration, framePadding, reverse, loop) {
-        Object.assign(this, { spritesheet, xStart, yStart, height, width, frameCount, frameDuration, framePadding, reverse, loop });
+    constructor(spritesheet, xStart, yStart, width, height, frameCount, frameDuration, framePadding, reverse, loop, loopStart = 0, loopEnd = frameCount) {
+        Object.assign(this, { spritesheet, xStart, yStart, height, width, frameCount, frameDuration, framePadding, reverse, loop, loopStart, loopEnd});
+        if (this.loop) {
+            this.loopStart = loopStart;
+            this.loopEnd = loopEnd;
+        }
+        
         
         this.elapsedTime = 0;
         this.totalTime = this.frameCount * this.frameDuration;
@@ -13,9 +32,10 @@ class Animator {
         
         if (this.isDone()) {
             if (this.loop) {
-                this.elapsedTime -= this.totalTime;
+                this.elapsedTime -= (this.frameDuration * (this.loopEnd - this.loopStart));
             } else {
                 console.log("WARNING: DRAWING A FRAME FOR A FINISHED ANIMATION");
+                console.log("   " + this.yStart);
                 return;
             }
         }
@@ -43,4 +63,12 @@ class Animator {
     isDone() {
         return (this.elapsedTime >= this.totalTime);
     };
+    
+    isAlmostDone() {
+        return this.currentFrame() == this.frameCount - 1;
+    }
+    
+    reset() {
+        this.elapsedTime = 0;
+    }
 };
