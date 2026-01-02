@@ -31,7 +31,7 @@ class Spyro {
             console.log("jump done!");
             // this.jumpAnim.reset();
             this.state = 4;
-        } else if (this.prevState == 4 && this.landAnim.isDone()) { // land
+        } else if (this.prevState == 4 && this.landAnim.isAlmostDone()) { // land
             console.log("land done!");
             // this.landAnim.reset();
             this.state = 0;
