@@ -27,6 +27,7 @@ class Spyro {
         this.prevState = this.state;
         
         // swap state based on previous state
+        // TODO: fix flickering issue when swapping animation states
         if (this.prevState == 2 && this.jumpAnim.isDone()) { // jump
             console.log("jump done!");
             // this.jumpAnim.reset();

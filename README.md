@@ -26,3 +26,5 @@
 - Spyro the Dragon sprites ripped from The Legend of Spyro: A New Beginning by [Heartlessdragoon](https://www.spriters-resource.com/profile/heartlessdragoon/). Thank you!
 
 - My spritesheet had animation loops that didn't loop over the full set of sprites, but instead a range, so I had to modify the `Animator` class to handle loops over a range of frames.
+
+- There's currently an issue for animations that consist of several different animations where when swapping animations, there's a very quick flicker. I'm currently working on a fix for the problem.
